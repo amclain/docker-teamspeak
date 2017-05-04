@@ -7,7 +7,7 @@ RUN apt-get -qq update && \
     apt-get -y install wget
 
 # Install TeamSpeak server.
-ENV TS_VERSION=3.0.13.3
+ENV TS_VERSION=3.0.13.6
 
 RUN wget http://dl.4players.de/ts/releases/${TS_VERSION}/teamspeak3-server_linux_amd64-${TS_VERSION}.tar.bz2
 RUN tar -xjf teamspeak3-server_linux_amd64-${TS_VERSION}.tar.bz2
