@@ -1,10 +1,10 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER Alex McLain <alex@alexmclain.com>
 
 # Install system packages.
 RUN apt-get -qq update && \
-    apt-get -y dist-upgrade && \
-    apt-get -y install wget
+    apt-get -y install wget bzip2 && \
+    rm -rf /var/lib/apt/lists/*
 
 # Install TeamSpeak server.
 ENV TS_VERSION=3.0.13.6
