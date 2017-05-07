@@ -7,9 +7,11 @@ services:
       - "9987:9987/udp"
       - "10011:10011"
       - "30033:30033"
-    # volumes:
-    #   - "./tsdata/ts3server.sqlitedb:/opt/teamspeak3-server_linux_amd64/ts3server.sqlitedb"
-    #   - "./tsdata/query_ip_blacklist.txt:/opt/teamspeak3-server_linux_amd64/query_ip_blacklist.txt"
-    #   - "./tsdata/query_ip_whitelist.txt:/opt/teamspeak3-server_linux_amd64/query_ip_whitelist.txt"
-    #   - "./tsdata/files:/opt/teamspeak3-server_linux_amd64/files"
-    #   - "./tsdata/logs:/opt/teamspeak3-server_linux_amd64/logs"
+    volumes:
+      - "./data/ts3server.sqlitedb:/opt/teamspeak3-server_linux_amd64/ts3server.sqlitedb"
+      - "./data/ts3server.sqlitedb-shm:/opt/teamspeak3-server_linux_amd64/ts3server.sqlitedb-shm"
+      - "./data/ts3server.sqlitedb-wal:/opt/teamspeak3-server_linux_amd64/ts3server.sqlitedb-wal"
+      - "./data/query_ip_blacklist.txt:/opt/teamspeak3-server_linux_amd64/query_ip_blacklist.txt"
+      - "./data/query_ip_whitelist.txt:/opt/teamspeak3-server_linux_amd64/query_ip_whitelist.txt"
+      - "./data/files:/opt/teamspeak3-server_linux_amd64/files"
+      - "./data/logs:/opt/teamspeak3-server_linux_amd64/logs"
