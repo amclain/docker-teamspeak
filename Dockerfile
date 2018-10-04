@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 MAINTAINER Alex McLain <alex@alexmclain.com>
 
 # Install system packages.
